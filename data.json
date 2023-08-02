@@ -1,0 +1,74 @@
+{
+  "questions": [
+    {
+      "question": "Was ist die Hauptfunktion eines Betriebssystems?",
+      "options": [
+        "Bilder bearbeiten",
+        "Musik abspielen",
+        "Software und Hardware verwalten",
+        "E-Mails senden"
+      ],
+      "answer": "Software und Hardware verwalten"
+    },
+    {
+      "question": "Welche Programmiersprache wurde primär für das World Wide Web entwickelt?",
+      "options": [
+        "Python",
+        "Java",
+        "HTML",
+        "C++"
+      ],
+      "answer": "HTML"
+    },
+    {
+      "question": "Was bedeutet die Abkürzung 'URL'?",
+      "options": [
+        "Uniform Resource Locator",
+        "Unified Retrieval Language",
+        "Universal Relay Location",
+        "Uniform Reactive Locator"
+      ],
+      "answer": "Uniform Resource Locator"
+    },
+    {
+      "question": "Welches Unternehmen entwickelte das Betriebssystem 'Windows'?",
+      "options": [
+        "Apple",
+        "IBM",
+        "Microsoft",
+        "Google"
+      ],
+      "answer": "Microsoft"
+    },
+    {
+      "question": "Was ist kein gängiges Datenbanksystem?",
+      "options": [
+        "MySQL",
+        "MongoDB",
+        "Oracle",
+        "Excel"
+      ],
+      "answer": "Excel"
+    },
+    {
+      "question": "Welche der folgenden Optionen ist ein bekanntes Protokoll für die Übertragung von Webseiten?",
+      "options": [
+        "HTTP",
+        "USB",
+        "HDMI",
+        "SATA"
+      ],
+      "answer": "HTTP"
+    },
+    {
+      "question": "Welches Betriebssystem wird hauptsächlich für Supercomputer verwendet?",
+      "options": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "iOS"
+      ],
+      "answer": "Linux"
+    }
+  ]
+}

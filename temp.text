@@ -1,0 +1,67 @@
+fetch("/quizapp/data.json")
+    .then(response => response.json())
+    .then(data => {
+        let currentQuestion = 0;
+        let correctAnswers = 0;
+        let wrongAnswers = 0;
+
+        function setQuestionCount() {
+            document.getElementById('question-count').innerText = data.questions.length;
+        }
+
+        function updateQuestionPosition() {
+            document.getElementById('current-question-count').innerText = currentQuestion + 1;
+        }
+
+        function updateProgressBar() {
+            let progress = Math.round((currentQuestion) / data.questions.length * 100);
+            let progressBar = document.getElementById('progress-bar-container');
+            progressBar.style.width = progress + "%";
+            progressBar.innerHTML = progress ? progress + ' %' : '0 %';
+        }
+
+        function showQuestion() {
+            let question = data.questions[currentQuestion];
+            document.getElementById('question-text').innerHTML = question.question;
+            question.options.forEach((option, index) => {
+                document.getElementById(`answer-text-${index + 1}`).innerHTML = option;
+            });
+        }
+
+        function getRightAnswer() {
+            return data.questions[currentQuestion].answer;
+        }
+
+        function addCardListeners() {
+            let cardElems = document.querySelectorAll('.card.border-special-1');
+            cardElems.forEach(cardElem => {
+                let newCardElem = cardElem.cloneNode(true);
+                cardElem.parentNode.replaceChild(newCardElem, cardElem);
+                newCardElem.addEventListener('click', handleCardClick);
+            });
+        }
+
+        function handleCardClick(event) {
+            // ... Die Logik, die im Klick-Event-Handler ausgeführt wird ...
+        }
+
+        function setupQuiz() {
+            setQuestionCount();
+            showQuestion();
+            updateQuestionPosition();
+            addCardListeners();
+            updateProgressBar();
+        }
+
+        function nextQuestionOrFinish() {
+            // ... Die Logik, die beim Klicken auf "Nächste Frage" oder "Abschließen" ausgeführt wird ...
+        }
+
+        let nextBtn = document.getElementById('next-button');
+        nextBtn.addEventListener('click', nextQuestionOrFinish);
+
+        setupQuiz();
+
+        // Rest des Codes, einschließlich Audio-Erstellung, Neustart-Logik, etc.
+    })
+    .catch(error => console.error('Error:', error));
