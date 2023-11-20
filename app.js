@@ -2,6 +2,7 @@
 fetch("/quizapp/data.json")
     .then(response => response.json())
     .then(data => {
+        
         // Initialisierung von Variablen
         let currentQuestion = 0;
         let correctAnswers = 0;
@@ -36,7 +37,7 @@ fetch("/quizapp/data.json")
 
         // Diese Funktion ist dafür verantwortlich, die aktuelle Frage und die zugehörigen Antwortoptionen anzuzeigen
         function showQuestion() {
-            // Holt die aktuelle Frage aus dem Datensatz anhand des aktuellen Frageindex
+            // Holt die aktuelle Frage aus dem Datensatz anhand des aktuellen Frage-index
             let question = data.questions[currentQuestion];
 
             // Setzt den Text der aktuellen Frage im HTML-Element mit der ID 'question-text'
